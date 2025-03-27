@@ -1,1 +1,2 @@
-# api-kardex-nph
+# Transac_kardex
+Transaccional de kardex
