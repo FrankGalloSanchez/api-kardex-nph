@@ -8,10 +8,10 @@ import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
 @RestController
+@AllConstructor
 @RequestMapping("/NPH/type-kardex")
 public class RestTypeKardex {
 
-     @Autowired
     private TypeKardexService service;
 
     // Listar todos los registros
