@@ -12,8 +12,12 @@ import pe.edu.vallegrande.SupplierNPH.service.ShedService;
 @RequestMapping("/NPH/sheds")
 public class RestShed {
 
-    @Autowired
     private ShedService shedService;
+
+    @Autowired
+    public RestShed(ShedService shedService){
+        this.shedService = shedService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
