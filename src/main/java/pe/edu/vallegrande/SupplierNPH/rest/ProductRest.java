@@ -12,8 +12,13 @@ import reactor.core.publisher.Flux;
 @RequestMapping("/NPH/products")
 public class ProductRest {
 
-    @Autowired
     private ProductService productService;
+
+    @Autowired
+    public ProductRest(ProductService productService) {
+        this.productService = productService;
+    }
+    
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
