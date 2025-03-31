@@ -12,8 +12,12 @@ import pe.edu.vallegrande.SupplierNPH.service.UbigeoService;
 @RequestMapping("/NPH/ubigeo")
 public class UbigeoRest {
 
-    @Autowired
     private UbigeoService ubigeoService;
+    
+    @Autowired
+    public UbigeoRest(UbigeoService ubigeoService) {
+        this.ubigeoService = ubigeoService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
